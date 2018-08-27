@@ -43,7 +43,6 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
-    '',
     'apps.usuarios',
 ]
 
