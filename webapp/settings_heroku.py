@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '.localhost.pe',
+    'boiling-temple-49703.herokuapp.com'
 ]
 
 
@@ -131,7 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static_produccion')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_produccion')
 
 AUTH_USER_MODEL = 'usuarios.User'
 
@@ -139,6 +140,9 @@ AUTH_USER_MODEL = 'usuarios.User'
 # Extra config
 CSRF_TRUSTED_ORIGINS = [
     '.localhost.pe',
+    'boiling-temple-49703.herokuapp.com'
 ]
 
 # SESSION_COOKIE_SAMESITE = None
+
+django_heroku.settings(locals())
