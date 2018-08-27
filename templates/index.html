@@ -1,0 +1,14 @@
+{% load tz %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test App</title>
+</head>
+<body>
+		{% now 'DATETIME_FORMAT' %}
+		{{ publi.fecha }}
+		{{ publi.fecha_modificacion }}
+	{% localtime on %}
+	{% endlocaltime %}
+</body>
+</html>
