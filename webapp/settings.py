@@ -26,7 +26,8 @@ SECRET_KEY = '%y-wjzik*y^ka&uj5pdl4o!7k9y$upj&n&*i27-5e(g0axze8g'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '.localhost.pe'
+    '.localhost.pe',
+    'boiling-temple-49703.herokuapp.com'
 ]
 
 
@@ -138,7 +139,8 @@ AUTH_USER_MODEL = 'usuarios.User'
 
 # Extra config
 CSRF_TRUSTED_ORIGINS = [
-    '.localhost.pe'
+    '.localhost.pe',
+    'boiling-temple-49703.herokuapp.com'
 ]
 
 # SESSION_COOKIE_SAMESITE = None
