@@ -9,7 +9,7 @@ from django.utils import timezone
 
 # Create your views here.
 class HomeView(APIView):
-	def get(self, request):
+	def get(self, request, format='json'):
 		p, c = Publicacion.objects.get_or_create(pk=1)
 		if request.GET.get("json"):
 			return Response({
