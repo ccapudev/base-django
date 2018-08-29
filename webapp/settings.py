@@ -26,7 +26,7 @@ SECRET_KEY = '%y-wjzik*y^ka&uj5pdl4o!7k9y$upj&n&*i27-5e(g0axze8g'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '.localhost.pe',
+    '*',
 ]
 
 
@@ -119,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-pe'
 
-# TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Lima'
 
 USE_I18N = True
 
@@ -132,6 +132,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static_produccion')
 
 AUTH_USER_MODEL = 'usuarios.User'
