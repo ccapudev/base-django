@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 
 class User(AbstractUser):
@@ -13,4 +14,7 @@ class Publicacion(models.Model):
 
 
 class Perfil(models.Model):
-    pass
+    user = models.OneToOneField(settings.AUTH_USER_MODEL)
+
+    def __str__(self):
+        return "Perfil UID: %d" % self.user_id
